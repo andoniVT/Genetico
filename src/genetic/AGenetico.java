@@ -1,13 +1,14 @@
 package genetic;
 
 import java.util.Vector;
-
+import genetic.Utils;
 public class AGenetico 
 {
 	public Vector poblacion;
 	public int nGenerations;
 	public double pCruce;
 	public int tCruce;
+	public Vector populationFitness;
 	
 	public AGenetico(Vector pob ,int nG, double pC, int tC)
 	{
@@ -15,6 +16,13 @@ public class AGenetico
 		nGenerations = nG;
 		pCruce = pC;
 		tCruce = tC;
+		populationFitness = new Vector();
+	}
+	
+	public void hallarFitnessIndividuo(int index)
+	{
+		double fitness = Utils.promedio((Vector)poblacion.elementAt(index));	
+				
 	}
 	
 	public void print()
@@ -73,12 +81,7 @@ public class AGenetico
 		
 		
 		AGenetico genetic = new AGenetico(poblacion, 12, 12.4, 3);
-		genetic.print();
-		
-		
-		
-		
-
+		genetic.print();			
 	}
 
 }

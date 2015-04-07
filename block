@@ -1,0 +1,42 @@
+
+
+documentos = 1000
+
+query = "ciencia computacion"
+
+  r1 =  doc1
+  r2 =  doc2
+  r3 =  doc3
+  ....
+  r15 = doc15
+
+
+    lista palabras de los 15 documentos
+            palabra1 = 0.8 
+            palabra2 = 0.4
+            palabra3 = 0.9
+            ........
+            palabraN = 0.1
+
+    100 individuos  
+
+        [ pal1 , pal2, pal3, pal4, pal5, pal6]
+        [ pal1 , pal2, pal3, pal4, pal5, pal6]
+        [ pal1 , pal2, pal3, pal4, pal5, pal6]
+        [ pal1 , pal2, pal3, pal4, pal5, pal6]
+        [ pal1 , pal2, pal3, pal4, pal5, pal6]
+
+
+        ("palabra" , 0.3) , ("palabra2" , 0.3) , ("palabra3" , 0.3) , ("palabra4" , 0.3) , ("palabra5" , 0.3)
+
+        
+
+
+
+
+
+
+
+
+
+
