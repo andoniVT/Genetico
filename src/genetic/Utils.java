@@ -4,6 +4,7 @@ import java.awt.List;
 import java.util.ArrayList;
 import java.util.Vector;
 import java.util.Collections;
+import java.lang.Math;
 
 public class Utils 
 {		
@@ -47,8 +48,12 @@ public class Utils
 		pares.add(par4);
 		System.out.println(promedio(pares));*/
 		
-		ArrayList l = getIndices(10);
-		System.out.println(l);
+		//ArrayList l = getIndices(10);
+		//System.out.println(l);
+		
+		
+		int val = (int) (Math.random() *(10));
+		System.out.println(val);
 		
 		
 		

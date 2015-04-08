@@ -1,6 +1,7 @@
 package genetic;
 
 import java.util.ArrayList;
+import java.lang.Math;
 import java.util.Vector;
 
 import genetic.Utils;
@@ -46,7 +47,6 @@ public class AGenetico
 	{
 		System.out.println(populationFitness);
 	}
-	
 		
 	public void seleccionTorneo()
 	{
@@ -76,9 +76,35 @@ public class AGenetico
 		poblacion = nueva_poblacion;		
 	}
 	
-	public void cruce1Punto()
+	public void cruce1Punto(int index , int index2)
 	{
-		
+		Vector individuo = (Vector)poblacion.elementAt(index);
+		Vector individuo2 = (Vector)poblacion.elementAt(index2);
+		Vector hijo = new Vector() , hijo2 = new Vector();
+		int corte = (int) (Math.random() *(individuo.size()));
+		int i=0;
+		while(i<individuo.size())
+		{
+		  int j=0;
+		  while(j<corte)
+		  {
+			  hijo.add(individuo.elementAt(j));
+			  hijo2.add(individuo2.elementAt(j));
+			  j+=1;
+			  i+=1;
+		  }
+		  int k = corte;
+		  while(k<individuo.size())
+		  {
+			  hijo.add(individuo2.elementAt(k));
+			  hijo2.add(individuo.elementAt(k));
+			  k+=1;
+			  i+=1;
+		  }
+		  i+=1;
+		}
+		poblacion.set(index, hijo);
+		poblacion.set(index2, hijo2);		
 	}
 	
 	public void cruce2Punto()
@@ -136,7 +162,8 @@ public class AGenetico
 		poblacion.add(ind3); poblacion.add(ind4);
 				
 		AGenetico genetic = new AGenetico(poblacion, 12, 12.4, 3);
-		System.out.println("Poblacion Inicial");
+		genetic.cruce1Punto(0, 1);
+		/*System.out.println("Poblacion Inicial");
 		genetic.print();
 		genetic.hallarFitnessPoblacion();
 		System.out.println("Fitness de la Poblacion");
@@ -146,7 +173,7 @@ public class AGenetico
 		genetic.print();
 		genetic.hallarFitnessPoblacion();
 		System.out.println("Nuevo fitness");
-		genetic.showFitness();
+		genetic.showFitness();*/
 	}
 
 }
