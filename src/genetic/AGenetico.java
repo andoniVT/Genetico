@@ -25,6 +25,32 @@ public class AGenetico
 				
 	}
 	
+	public void ordenarPoblacion()
+	{
+		
+	}
+	
+	public void seleccionTorneo()
+	{
+		
+	}
+	
+	public void cruce1Punto()
+	{
+		
+	}
+	
+	public void cruce2Punto()
+	{
+		
+	}
+	
+	
+	public void execute()
+	{
+		
+	}
+	
 	public void print()
 	{
 		for(int i=0; i<poblacion.size(); i++)
