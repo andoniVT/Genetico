@@ -2,6 +2,7 @@ package genetic;
 
 import java.util.Vector;
 import genetic.Utils;
+
 public class AGenetico 
 {
 	public Vector poblacion;
@@ -24,15 +25,10 @@ public class AGenetico
 		double fitness = Utils.promedio((Vector)poblacion.elementAt(index));	
 				
 	}
-	
-	public void ordenarPoblacion()
-	{
 		
-	}
-	
 	public void seleccionTorneo()
 	{
-		
+		System.out.println("");
 	}
 	
 	public void cruce1Punto()
