@@ -177,9 +177,24 @@ public class AGenetico
 		}
 	}
 	
+	public void realizarCruce()
+	{
+		if (tCruce==1) cruce1PuntoAll();
+		else cruce2PuntoAll();		
+	}
+	
 	public void execute()
 	{
-		
+		hallarFitnessPoblacion();
+		int total_cruces = (int)(pCruce*nGenerations);
+		ArrayList probabilidadesC = Utils.getCruces(nGenerations, total_cruces);
+		for(int i=0; i<nGenerations; i++)
+		{
+			System.out.println("Generacion " + Integer.toString(i+1));
+			seleccionTorneo();
+			if((int)probabilidadesC.get(i)==1) realizarCruce();
+			hallarFitnessPoblacion();			
+		}
 	}
 	
 	public void print()
@@ -226,22 +241,8 @@ public class AGenetico
 		poblacion.add(ind3); poblacion.add(ind4);
 				
 		AGenetico genetic = new AGenetico(poblacion, 12, 12.4, 3);
-		System.out.println("Poblacion Inicial");
-		genetic.print();
-		System.out.println("Poblacion Despues del Cruce");
-		genetic.cruce1PuntoAll();
-		genetic.print();
-		/*System.out.println("Poblacion Inicial");
-		genetic.print();
-		genetic.hallarFitnessPoblacion();
-		System.out.println("Fitness de la Poblacion");
-		genetic.showFitness();		
-		genetic.seleccionTorneo();		
-		System.out.println("Poblacion despues del torneo");
-		genetic.print();
-		genetic.hallarFitnessPoblacion();
-		System.out.println("Nuevo fitness");
-		genetic.showFitness();*/
+		genetic.execute();
+			
 	}
 
 }

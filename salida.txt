@@ -1,53 +1,84 @@
-Poblacion Inicial
-Individuo 1
-(jorge,2.4)
-(andoni,2.2)
-(valverde,0.5)
-(tohalino,3.0)
-
-Individuo 2
-(juan,1.4)
-(jose,1.2)
-(vera,3.5)
-(lala,5.0)
-
-Individuo 3
-(p1,5.4)
-(p5,4.2)
-(p8,8.5)
-(p45,6.0)
-
-Individuo 4
-(p77,4.0)
-(p7,6.8)
-(p8,10.8)
-(p5,8.0)
-
-Poblacion Despues del Cruce
-[3, 2, 1, 0]
-Corte: 3
-Corte: 2
-Individuo 1
-(jorge,2.4)
-(andoni,2.2)
-(vera,3.5)
-(lala,5.0)
-
-Individuo 2
-(juan,1.4)
-(jose,1.2)
-(valverde,0.5)
-(tohalino,3.0)
-
-Individuo 3
-(p1,5.4)
-(p5,4.2)
-(p8,8.5)
-(p5,8.0)
-
-Individuo 4
-(p77,4.0)
-(p7,6.8)
-(p8,10.8)
-(p45,6.0)
-
+Generacion 1
+[3, 0, 1, 2]
+[2, 0, 1, 3]
+1
+3
+1
+3
+Generacion 2
+[0, 2, 3, 1]
+[3, 2, 0, 1]
+0
+2
+0
+3
+Generacion 3
+[0, 2, 3, 1]
+[3, 2, 0, 1]
+0
+2
+1
+2
+Generacion 4
+[0, 1, 2, 3]
+[2, 1, 0, 3]
+1
+3
+1
+2
+Generacion 5
+[1, 2, 0, 3]
+[2, 0, 1, 3]
+0
+3
+1
+2
+Generacion 6
+[1, 3, 0, 2]
+[1, 3, 2, 0]
+0
+2
+1
+3
+Generacion 7
+[3, 2, 0, 1]
+[3, 2, 0, 1]
+1
+3
+1
+2
+Generacion 8
+[2, 1, 0, 3]
+[2, 1, 0, 3]
+0
+3
+0
+3
+Generacion 9
+[2, 3, 1, 0]
+[0, 1, 3, 2]
+0
+3
+0
+3
+Generacion 10
+[3, 0, 2, 1]
+[3, 2, 0, 1]
+1
+2
+1
+2
+Generacion 11
+[2, 1, 0, 3]
+[2, 3, 1, 0]
+1
+2
+0
+2
+Generacion 12
+[0, 3, 1, 2]
+[2, 0, 1, 3]
+1
+2
+0
+3

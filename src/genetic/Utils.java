@@ -33,6 +33,21 @@ public class Utils
 		return arrlist;		
 	}
 	
+	public static ArrayList getCruces(int nGeneraciones , int tCruces)
+	{
+		ArrayList arrlist = new ArrayList();
+		for(int i=0; i<tCruces; i++)
+		{
+			arrlist.add(1);
+		}
+		for(int i=0; i<nGeneraciones-tCruces; i++)
+		{
+			arrlist.add(0);
+		}
+		Collections.shuffle(arrlist);
+		return arrlist;
+	}
+	
 	
 	public static void main(String[] args) 
 	{
@@ -48,22 +63,11 @@ public class Utils
 		pares.add(par4);
 		System.out.println(promedio(pares));*/
 		
-		//ArrayList l = getIndices(10);
-		//System.out.println(l);
+		ArrayList l = getCruces(15,6);
+		System.out.println(l.size());
+		System.out.println(l);
 		
-		
-		//  10
-		// 0-4  5-9
-		int n = 10;
-		
-		int corte1 = (int) (Math.random() *(n/2));
-		System.out.println(corte1);
-		
-		int inicio = (n/2);
-		int fin = n-1;
-		
-		int corte2 = (int)(Math.random()*(fin-inicio+1)+inicio);
-		System.out.println(corte2);
+
 		
 		
 	}
