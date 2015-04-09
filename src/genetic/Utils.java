@@ -52,9 +52,18 @@ public class Utils
 		//System.out.println(l);
 		
 		
-		int val = (int) (Math.random() *(10));
-		System.out.println(val);
+		//  10
+		// 0-4  5-9
+		int n = 10;
 		
+		int corte1 = (int) (Math.random() *(n/2));
+		System.out.println(corte1);
+		
+		int inicio = (n/2);
+		int fin = n-1;
+		
+		int corte2 = (int)(Math.random()*(fin-inicio+1)+inicio);
+		System.out.println(corte2);
 		
 		
 	}

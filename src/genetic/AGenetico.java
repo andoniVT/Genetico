@@ -126,11 +126,55 @@ public class AGenetico
 		Vector individuo = (Vector)poblacion.elementAt(index);
 		Vector individuo2 = (Vector)poblacion.elementAt(index2);
 		Vector hijo = new Vector() , hijo2 = new Vector();
+		int N = individuo.size();		
+		int corte1 = (int) (Math.random() *(N/2));
+		System.out.println(corte1);	
+		int inicio = (N/2);
+		int fin = N-1;	
+		int corte2 = (int)(Math.random()*(fin-inicio+1)+inicio);
+		System.out.println(corte2);
+		int i=0;
+		while(i<N)
+		{
+			int j=0;
+			while(j<corte1)
+			{
+				hijo.add(individuo.elementAt(j));
+				hijo2.add(individuo2.elementAt(j));
+				j+=1;
+				i+=1;			
+			}
+			int k = corte1;
+			while(k<corte2)
+			{
+				hijo.add(individuo2.elementAt(k));
+				hijo2.add(individuo.elementAt(k));
+				k+=1;
+				i+=1;
+			}
+			int l = corte2;
+			while(l<N)
+			{
+				hijo.add(individuo.elementAt(l));
+				hijo2.add(individuo2.elementAt(l));
+				l+=1;
+				i+=1;
+			}
+		}
+		poblacion.set(index, hijo);
+		poblacion.set(index2, hijo2);			
 	}
 	
 	public void cruce2PuntoAll()
 	{
-		
+		ArrayList indices = Utils.getIndices(sizePoblacion);
+		System.out.println(indices);
+		for(int i=0; i<indices.size(); i=i+2)
+		{
+			int position = (int)indices.get(i);
+			int position2 = (int)indices.get(i+1);
+			cruce2Punto(position, position2);
+		}
 	}
 	
 	public void execute()
