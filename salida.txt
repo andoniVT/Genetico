@@ -1,1 +1,53 @@
-0
+Poblacion Inicial
+Individuo 1
+(jorge,2.4)
+(andoni,2.2)
+(valverde,0.5)
+(tohalino,3.0)
+
+Individuo 2
+(juan,1.4)
+(jose,1.2)
+(vera,3.5)
+(lala,5.0)
+
+Individuo 3
+(p1,5.4)
+(p5,4.2)
+(p8,8.5)
+(p45,6.0)
+
+Individuo 4
+(p77,4.0)
+(p7,6.8)
+(p8,10.8)
+(p5,8.0)
+
+Poblacion Despues del Cruce
+[3, 2, 1, 0]
+Corte: 3
+Corte: 2
+Individuo 1
+(jorge,2.4)
+(andoni,2.2)
+(vera,3.5)
+(lala,5.0)
+
+Individuo 2
+(juan,1.4)
+(jose,1.2)
+(valverde,0.5)
+(tohalino,3.0)
+
+Individuo 3
+(p1,5.4)
+(p5,4.2)
+(p8,8.5)
+(p5,8.0)
+
+Individuo 4
+(p77,4.0)
+(p7,6.8)
+(p8,10.8)
+(p45,6.0)
+
